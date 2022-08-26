@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DJango learning</title>
+</head>
+<body>
+    <ul>
+        {% for fruit in fruits%}
+          
+          <li> <b>{{fruit.fruit_name}}</b>- Price  :  {{fruit.price}}</li>
+          
+        {% endfor %}
+    </ul>
+
+    {% comment "Optional note" %}
+            <p>Commented out text with {{ create_date|date:"c" }}</p>
+    {% endcomment %}    
+    
+    <h1>Hello world  this is shyam kumar</h1>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore voluptas officia qui! Harum ex vel voluptatem, obcaecati eius ducimus a ipsum magni perspiciatis atque, dolorem pariatur quae ullam tempora numquam.</p>
+    <div id="sidebar">
+        {% block sidebar %}
+        <ul>
+            <li><a href="/">Home</a></li>
+            <li><a href="/blog/">Blog</a></li>
+        </ul>
+        {% endblock %}
+    </div>
+
+    <div id="content">
+        {% block content %}
+        {% endblock %}
+    </div>
+
+</body>
+</html>
